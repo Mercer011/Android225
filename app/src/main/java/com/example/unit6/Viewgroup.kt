@@ -15,4 +15,13 @@ class Viewgroup(fragmentActivity: FragmentActivity):FragmentStateAdapter(fragmen
         }
     }
 
+    fun getTabTitle(position: Int): String {
+     return when(position){
+         0 -> "Camera"
+         1 -> "Chat"
+         2 -> "Profile"
+         else -> throw IllegalStateException("Invalid position: $position")
+
+     }
+    }
 }
